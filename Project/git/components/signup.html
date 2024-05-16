@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="/Project/res/tab.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("/Project/res/Signup.png");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            background-color: white;
+        }
+
+        nav {
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+    
+
+        .active {
+            padding: 10px 20px;
+            border-radius: 25px;
+            background-color: red;
+            color: white;
+        }
+
+        nav .active:hover {
+            color: white;
+        }
+
+        #profile {
+            margin-left: 150px;
+        }
+
+        .main-content {
+            text-align: center;
+            color: white;
+        }
+
+        .options img {
+            width: 100%;
+            max-width: 150px;
+            margin: 0 auto;
+        }
+
+        .options button {
+            background-color: #FF5733;
+            border: none;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 200px;
+            border-radius: 25px;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .intro {
+            margin-top: 35px;
+        }
+
+        #pro_name {
+            font-size: 3em;
+            margin-left: 90px;
+            color: white;
+            
+        }
+
+        @media only screen and (min-width: 768px) {
+            nav ul {
+                margin-top: 0;
+            }
+            .options img {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            .options button {
+                margin-top: 0;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            nav ul {
+                margin-top: 0;
+                margin-left: 200px;
+                gap: 30px;
+            }
+            .options img {
+                margin-top: 50px;
+                margin-bottom: 50px;
+               
+            }
+            .options button {
+                margin-top: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/Project/other/index.html"><img height="75" src="/Project/res/logo.png" alt="Logo"></a>
+            </div>
+            <ul class="navbar">
+                <li><a href="/Project/git/components/signup.html" class="active">Sign up</a></li>
+                <li><a href="/Project/components/login.html">Login</a></li>
+                <li><a href="/Project/components/bestseller.html">Best-Seller</a></li>
+                <li><a href="/Project/new/new.html">Upload Content</a></li>
+                <li><a href="/Project/components/topvloger.html">Top Vloggers</a></li>
+            </ul>
+            <div id="profile">
+                <a href="#"><img height="30" src="/Project/res/profile.png" alt="Profile"></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h1 id="pro_name"></h1>
+        <div class="main-content">
+            <h2>Sign Up As User or Vlogger?</h2>
+            <div class="options">
+                <img height="150" src="/Project/git/res/user.png" alt="User Icon">
+                <img height="150" style="margin-left: 8%;" src="/Project/git/res/vlogger.png" alt="Vlogger Icon">
+                <br>
+                <button><a href="/Food_Yatri/Project/components/user_signin.html">USER</a></button>
+                <button><a href="/Food_Yatri/Project/components/vlogger_signin.html">VLOGGER</a></button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var navbarContainer = document.getElementsByClassName("navbar")[0];
+
+        var links = navbarContainer.getElementsByClassName("navbar a");
+        
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+    </script>
+
+</body>
+</html>

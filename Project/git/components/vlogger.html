@@ -1,0 +1,501 @@
+<!--Profile Cards HTML code-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/Food_Yatri/Project/res/tab.ico" type="image/x-icon">
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Vloggers</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-image: linear-gradient(
+                to right bottom,
+                #00050f,
+                #261e45,
+                #711a64,
+                #c5005a,
+                #ff0224
+            );
+            background-repeat: no-repeat;
+        }
+
+        section {
+            position: relative;
+            height: 450px;
+            width: 1075px;
+            display: flex;
+            align-items: center;
+        }
+        .swiper {
+            width: 950px;
+        }
+
+        section .card .image {
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            padding: 3px;
+            background: #410838;
+        }
+        section .card .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+        .card {
+            position: relative;
+            background: #fff;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            height: 40%;
+            width: 100%;
+            background: #711a64;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .card .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            position: relative;
+            z-index: 100;
+        }
+
+        .card .media-icon {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card .media-icon i {
+            color: #fff;
+            opacity: 0.6;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .card .media-icon i:hover {
+            opacity: 1;
+        }
+
+        .card .name-city {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .name-city .name {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .name-city .city {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .card .rating {
+            display: flex;
+            align-items: center;
+            margin-top: 18px;
+        }
+
+        .card .rating i {
+            font-size: 18px;
+            margin: 0 2px;
+            color: #711a64;
+        }
+        .card .button {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .card .button button {
+            background: #711a64;
+            outline: none;
+            border: none;
+            color: #fff;
+            padding: 8px 22px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .button button:hover {
+            background: #565356a2;
+        }
+
+        .active {
+            padding: 10px 20px;
+            border-radius: 25px;
+            background-color: red;
+            color: white;
+        }
+
+        nav .active:hover {
+            color: white;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav ul li {
+            margin-right: 10px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <div class="logo">
+            <a href="/Food_Yatri/Project/index.html"><img height="75" src="/Food_Yatri/Project/res/logo.png" alt="Logo"></a>
+          </div>
+          <ul>
+            <li><a href="/Food_Yatri/Project/components/signup.html">Sign up</a></li>
+            <li><a href="/Food_Yatri/Project/components/login.html">Login</a></li>
+            <li><a href="/Food_Yatri/Project/components/bestseller.html">Best-Seller</a></li>
+            <li><a href="/Food_Yatri/Project/components/uploadcontent.html">Upload Content</a></li>
+            <li><a href="/Food_Yatri/Project/components/vlogger.html" class="active">Top Vloggers</a></li>
+          </ul>
+          <div id="profile">
+            <a href="#"><img height="30" src="/Food_Yatri/Project/res/profile.png" alt="Profile"></a>
+          </div>
+        </nav>
+      </header>
+    <section>
+      <div class="swiper mySwiper container">
+        <div class="swiper-wrapper content">
+          <!--Vlogger 1-->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="/Food_Yatri/Project/res/images/profile1.jpg" alt="" />
+              </div>
+
+              <div class="media-icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+
+              <div class="name-city">
+                <span class="name">Joohie Patel</span>
+                <span class="city">Vadodara</span>
+              </div>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+
+              <div class="button">
+                <button class="aboutMe">About Me</button>
+                <a href="/Food_Yatri/Project/components/profile.html"><button class="Explore">Explore</button></a>
+              </div>
+            </div>
+          </div>
+
+          <!--Vlogger 2-->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="/Food_Yatri/Project/res/images/profile2.jpg" alt="" />
+              </div>
+
+              <div class="media-icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+
+              <div class="name-city">
+                <span class="name">Karan Patel</span>
+                <span class="city">Ahemdabad</span>
+              </div>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+
+              <div class="button">
+                <button class="aboutMe">About Me</button>
+                <button class="Explore">Explore</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Vlogger 3-->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="/Food_Yatri/Project/res/images/profile3.jpg" alt="" />
+              </div>
+
+              <div class="media-icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+
+              <div class="name-city">
+                <span class="name">Anisha Bhatt</span>
+                <span class="city">Surat</span>
+              </div>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+
+              <div class="button">
+                <button class="aboutMe">About Me</button>
+                <button class="Explore">Explore</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Vlogger 4-->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="/Food_Yatri/Project/res/images/profile4.jpg" alt="" />
+              </div>
+
+              <div class="media-icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+
+              <div class="name-city">
+                <span class="name">Isha Shah</span>
+                <span class="city">Vadodara</span>
+              </div>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+
+              <div class="button">
+                <button class="aboutMe">About Me</button>
+                <button class="Explore">Explore</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Vlogger 5-->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="/Food_Yatri/Project/res/images/profile5.jpg" alt="" />
+              </div>
+
+              <div class="media-icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+
+              <div class="name-city">
+                <span class="name">Mishri Jaiswal</span>
+                <span class="city">Vadodara</span>
+              </div>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+
+              <div class="button">
+                <button class="aboutMe">About Me</button>
+                <button class="Explore">Explore</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Vlogger 6-->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="/Food_Yatri/Project/res/images/profile6.jpg" alt="" />
+              </div>
+
+              <div class="media-icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+
+              <div class="name-city">
+                <span class="name">Sneha Shah</span>
+                <span class="city">Ahemdabad</span>
+              </div>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+
+              <div class="button">
+                <button class="aboutMe">About Me</button>
+                <button class="Explore">Explore</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Vlogger 7-->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="image">
+                <img src="/Food_Yatri/Project/res/images/profile7.jpg" alt="" />
+              </div>
+
+              <div class="media-icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+
+              <div class="name-city">
+                <span class="name">Riya Thakkar</span>
+                <span class="city">Vadodara</span>
+              </div>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+
+              <div class="button">
+                <button class="aboutMe">About Me</button>
+                <button class="Explore">Explore</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Link your separated JavaScript file -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+
+        var navbarContainer = document.getElementsByClassName("navbar")[0];
+
+        var links = navbarContainer.getElementsByClassName("navbar a");
+        
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+    </script>
+  </body>
+</html>

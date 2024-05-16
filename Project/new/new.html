@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Content</title>
+  <link rel="stylesheet" type="text/css" href="style_1.css">
+</head>
+<style>
+  /* header {
+  height: 90px;
+  position: sticky;
+  top: 0;
+} */
+  nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .logo {
+  margin-right: 20px;
+  }
+
+  nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  }
+
+  nav ul li {
+  /* margin-right: 10px; */
+  }
+
+  nav ul li:last-child {
+  margin-right: 0;
+  }
+
+  nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  }
+
+  nav ul li a:hover {
+  color: red;
+  }
+
+  #upload {
+      background-color: red;
+      border-radius: 20px;
+      padding: 4px 10px 4px 10px;
+  }
+
+  #upload:hover {
+      color: white;
+  }
+
+  .textbox {
+      border: solid;
+      width: 270px;
+      height: 35px;
+      background-color: red;
+      border-radius: 20px;
+      display: flex;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      margin-left: 200px;
+  }
+
+  ::placeholder {
+      color: white;
+      opacity: 0.8;
+  }
+  #submit {
+      width: 100px;
+      height: 40px;
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: red;
+      margin-left: 290px;
+  }
+  #signup_heading{
+      color: white;
+      font-size: 60px;
+      /* margin: 10px 10px 100px 100px ; */
+      margin-top: 150px;
+      margin-left: 50px;
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <nav>
+        <div class="logo">
+            <a href="/Project/other/index.html"><img height="75" src="logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="/Project/git/components/signup.html">Signup</a></li>
+            <li><a href="/Food_Yatri/Project/components/login.html" class="curved_rect">Login</a></li>
+            <li><a href="#">Best-Seller</a></li>
+            <li><a id="upload" href="/Project/new/new.html">Upload Content</a></li>
+            <li><a href="/Project/components/topvloger.html">Top Vlogger</a></li>
+            <!-- <li><a href="#">Upload Content</a></li> -->
+        </ul>
+        <div id="profile">
+            <a href="#"
+              ><img
+                height="30"
+                src="profile.png"
+                alt="Profile"
+            /></a>
+          </div>
+    </nav>
+  </header>
+</body>
+<body>
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+      <form action="">
+        <h2>Feed</h2>
+        <div class="input-group">
+          <input type="url" required>
+          <label for="">Add Vlog url</label>
+        </div>
+        <div class="input-group">
+          <input type="text" required>
+          <label for="">Food Name</label>
+        </div>
+        <div class="input-group">
+          <input type="text" required>
+          <label for="">Food Location</label>
+        </div>
+        <div class="input-group">
+          <input type="text" required>
+          <label for="">Shop Name</label>
+        </div>
+        <button type="submit"><b>Post</b></button>
+        
+      </form>
+    </div>
+
+  </div>
+
+  <script>
+    const signInBtnLink = document.querySelector('.signInBtn-link');
+    const wrapper = document.querySelector('.wrapper');
+
+    signInBtnLink.addEventListener('click', () => {
+        wrapper.classList.toggle('active');
+    });
+  </script>
+
+</body>
+
+</html>

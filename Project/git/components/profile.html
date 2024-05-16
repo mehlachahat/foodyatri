@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profiles</title>
+  <link rel="icon" href="/Food_Yatri/Project/res/tab.ico" type="image/x-icon">
+  <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    /* background-image: url("/Food_Yatri/Project/res/profile\ back.png"); */
+    background-image: linear-gradient(
+                to right bottom,
+                #030637,
+                #3c0753,
+                #720455,
+                #910a67 
+            );
+            background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  header.active {
+    background-color: rgba(0, 0, 0, 0.825);
+  }
+  nav {
+            position: sticky;
+            top: 10;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav ul li {
+            margin-right: 10px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+  
+  .avatar {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid red;
+  }
+
+  .vloggerproinfo{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  #profilephoto{
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  #vloggerinfo{
+    color:white;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  .vloggername{
+    font-size: 55px;
+    margin-top: 0px;
+  }
+  #contant{
+    margin: auto;
+    background-color:black;
+    width: 300px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    padding-top: 4px;
+    word-spacing: 100px;
+    border-radius: 1cm;
+    text-align: center;
+    border: 3px solid red;
+  }
+
+  .active {
+            padding: 10px 20px;
+            border-radius: 25px;
+            background-color: red;
+            color: white;
+        }
+
+        nav .active:hover {
+            color: white;
+        }
+
+  #contant a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .items{
+    display: grid;
+    grid-template-columns:repeat(3 , 1fr) ;
+    padding:30px 30px;
+   
+    grid-column-gap: 30px;
+    grid-row-gap:20px
+
+  }
+  .item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid red;
+  }
+
+  .oval-box {
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 20px auto;
+  /* margin-top: 100px; */
+}
+.back {
+    width: 100px;
+  height: 40px;
+  background-color: red;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  /* margin: 20px auto; */
+  margin-left: 1400px;
+}
+
+  @media screen and (max-width:1000px) {
+    .items{
+      grid-template-columns: repeat(2,1fr);
+
+    }
+    .avatar {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 3px solid red;
+    }
+    }
+    @media screen and (max-width:700px) {
+      .items{
+        grid-template-columns: repeat(1,1fr);
+  
+      }
+    
+    }
+  </style>
+</head>
+<body>
+  <header id ="header">
+    <nav id ="navbar">
+      <div class="logo">
+        <a href="/Food_Yatri/Project/index.html"><img height="75" src="/Food_Yatri/Project/res/logo.png" alt="Logo"></a>
+      </div>
+      <ul>
+        <li><a href="/Food_Yatri/Project/components/signup.html">Sign up</a></li>
+        <li><a href="/Food_Yatri/Project/components/login.html">Login</a></li>
+        <li><a href="/Food_Yatri/Project/components/bestseller.html">Best-Seller</a></li>
+        <li><a href="/Food_Yatri/Project/components/uploadcontent.html">Upload Content</a></li>
+        <li><a href="/Food_Yatri/Project/components/vlogger.html" class="active">Top Vloggers</a></li>
+      </ul>
+      <div id="profile">
+        <a href="#"><img height="30" src="/Food_Yatri/Project/res/profile.png" alt="Profile"></a>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <a href="/Food_Yatri/Project/components/vlogger.html"><button class="back">Back</button></a>
+  </div>
+  <section id ="profilephoto">
+    <div id ="vlogger1" class ="vloggerproinfo"> 
+      <img src="/Food_Yatri/Project/res/images/profile1.jpg" alt="Avatar" class="avatar">
+    </div >
+    
+    <div id ="vloggerinfo" class ="vloggerproinfo"> 
+      <h1 class ="vloggername">Joohie Patel</h1>
+      <h2><i>Followers : 200K</i> </h2>
+        <h2>Vadodara</h2>
+        <button class="oval-box">Follow</button> 
+    </div>
+  </section>
+  <div id="contant">
+    <a id ='post' href="">Post</a>
+    <a id ='collections' href="">Collections</a>
+  </div>
+
+  <section class="items">
+    <div class="item">
+      <img src="/Food_Yatri/Project/res/image/food1.png" alt="" >
+    </div>
+    <div class="item">
+      <img src="/Food_Yatri/Project/res/image/food2.png" alt="" >
+    </div>
+    <div class="item">
+      <img src="/Food_Yatri/Project/res/image/food3.png" alt="" >
+    </div>
+    <div class="item">
+      <img src="/Food_Yatri/Project/res/image/food4.png" alt="" >
+    </div>
+    <div class="item">
+      <img src="/Food_Yatri/Project/res/image/food5.png" alt="" >
+    </div>
+    <div class="item">
+      <img src="/Food_Yatri/Project/res/image/food6.png" alt="" >
+    </div>
+    
+  </section>
+
+  <script>
+    // alert("hello")
+// console.log('hello')
+const navbar = document.querySelector('#navbar')
+const header = document.querySelector('#header')
+window.onscroll=function(){
+    var top = window.scrollY;
+    console.log(top)
+    if (top >= 100){
+        header.classList.add('active')
+    }
+    else{
+        header.classList.remove('active')
+    }
+    
+}
+var navbarContainer = document.getElementsByClassName("navbar")[0];
+
+        var links = navbarContainer.getElementsByClassName("navbar a");
+        
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+  </script>
+  
+</body>
+</html>
